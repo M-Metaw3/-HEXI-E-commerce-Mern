@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-
+//dumy data
 const users = [
   {
     username: "Leanne Graham",
