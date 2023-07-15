@@ -10,6 +10,7 @@ import asyncHandler from "../utils/asyncHandler.utils.js";
 import {uploadSingleImage} from "../middleware/imgUpload.middleware.js";
 import sharp from "sharp";
 
+
 //__________IMAGES_HANDLER__________//
 // 1) UPLOADING(Multer)
 export const uploadBannerImage = uploadSingleImage("image");

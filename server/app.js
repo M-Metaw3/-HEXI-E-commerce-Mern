@@ -50,7 +50,7 @@ app.post(
 //_________MIDDLEWARES_________//
 // 1)_[SECURITY]-{CROSS_SITE_SCRIPTING(XSS)}_HELMET_HEADERS_
 // @desc Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!, The top-level helmet function is a wrapper around 15 smaller middlewares, using it at top level in middlewares stack.
-app.use(helmet());
+// app.use(helmet());
 
 // 2)_[SECURITY]-{BRUTE_FORCE_ATTACK_&_DENIAL_OF_SERVICE(DOS)_ATTACK}_RATE_LIMITING_
 // @descOfAttack[BRUTE_FORCE_ATTACK] A brute force attack is a commonly used attack for cracking passwords. These attacks are the cyber-equivalent of a situation we often see in movies: a door is locked, and a character has a key ring with no idea of which key fits into the lock. Time is running out. The owner will be there any moment now. So, the person tries one key after another, quickly, till one key fits. That’s a brute force attack for you. The attackers keep trying multiple combinations of usernames and passwords till they find one that works.
@@ -80,7 +80,7 @@ app.use(
 // a)protect from No Sql Injection
 app.use(mongoSanitize());
 // b)protect from xss
-app.use(xss());
+// app.use(xss());
 
 // 6) HPP (protect against HTTP Parameter Pollution)
 app.use(
