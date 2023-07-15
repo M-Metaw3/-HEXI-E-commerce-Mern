@@ -30,7 +30,16 @@ app.options("*", cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "uploads")));
+// app.use(express.static(path.join(__dirname,'../client/build/')))
 
+
+// app.get('/', async(req,res) => {
+//   await res.sendFile(path.resolve('../client/build/index.html'))
+//   console.log( "aa.getHours()")
+//   console.log( path.resolve('../client/build/index.html'))
+// console.log(path.join(__dirname,'../client/build'))
+  
+// })
 //_________STRIPE_WEBHOOK_________//
 app.post(
   "/api/webhook",
