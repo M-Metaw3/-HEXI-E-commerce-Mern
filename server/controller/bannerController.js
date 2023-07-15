@@ -26,7 +26,7 @@ export const resizeBannerImage = asyncHandler(async (req, res, next) => {
     .resize(1920, 784)
     .toFormat("jpeg")
     .jpeg({quality: 100})
-    .toFile(`uploads/banners/${filename}`);
+    .toFile(`./uploads/${filename}`);
   // put it in req.body to access it when we access createBanner ,updateSingleBanner to save the filename into database
   req.body.image = filename;
   next();
