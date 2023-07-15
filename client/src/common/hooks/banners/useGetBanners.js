@@ -10,6 +10,7 @@ const useGetBanners = () => {
     if (isMutation.success) {
       dispatch(getAllBanners());
       dispatch(resetMutationResult());
+      console.log(getAllBanners())
     } else {
       dispatch(getAllBanners());
     }
