@@ -4,7 +4,7 @@ import {fileURLToPath} from "url";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import routes from "./routes/index.js";
-import GlobalErrorMiddleware from "./middleware/GlobalError.middleware.js";
+import GlobalErrorMiddleware from "./middleware/globalError.middleware.js";
 import APIError from "./utils/apiError.utils.js";
 import cors from "cors";
 import {webhookCheckout} from "./controller/orderController.js";
