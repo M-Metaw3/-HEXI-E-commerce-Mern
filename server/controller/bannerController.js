@@ -10,7 +10,6 @@ import asyncHandler from "../utils/asyncHandler.utils.js";
 import {uploadSingleImage} from "../middleware/imgUpload.middleware.js";
 import sharp from "sharp";
 
-
 //__________IMAGES_HANDLER__________//
 // 1) UPLOADING(Multer)
 export const uploadBannerImage = uploadSingleImage("image");
@@ -23,10 +22,11 @@ export const resizeBannerImage = asyncHandler(async (req, res, next) => {
   const filename = `banner-${req.user._id}-${Date.now()}.jpeg`;
 
   await sharp(req.file.buffer)
+  
     .resize(1920, 784)
     .toFormat("jpeg")
     .jpeg({quality: 100})
-    .toFile(`./uploads/${filename}`);
+    .toFile(`../server/uploads/banners/${filename}`);
   // put it in req.body to access it when we access createBanner ,updateSingleBanner to save the filename into database
   req.body.image = filename;
   next();
